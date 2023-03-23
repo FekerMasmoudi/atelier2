@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+    padding: 10px;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+footer{
+    background-color: #111;
+}
+address{
+    color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><img src="logo.png"></li>
+  <li><a  href="index.html">Home</a></li>
+  <li><a href="product.html">Product</a></li>
+  <li><a class="active" href="contact.html">Contact</a></li>
+</ul>
+<img src="image2.jpg">
+<h3>Using CSS to style an HTML Form</h3>
+
+<div>
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<footer>
+    <table style="width: 100%;">
+    <tr>
+        <td style="width: 85%; border: #04AA6D;">
+            <address>
+                Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br> 
+                Visit us at:<br>
+                Example.com<br>
+                Box 564, Disneyland<br>
+                USA
+            </address>
+        </td>
+        <td>
+            <a href="" ><img src="facebook_icon-icons.com_59205.png" width="25px" height="25px"></a>
+        </td>
+        <td>
+            <a href="" ><img src="facebook_icon-icons.com_59205.png" width="25px" height="25px"></a>
+        </td>
+        <td>
+            <a href="" ><img src="facebook_icon-icons.com_59205.png" width="25px" height="25px"></a>
+        </td>
+    </tr>
+   
+</table>
+</footer>
+</body>
+</html>
