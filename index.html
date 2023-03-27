@@ -1,85 +1,173 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
 
-li {
-  float: left;
-}
+    li {
+      float: left;
+    }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
 
-li a:hover:not(.active) {
-  background-color: #111;
-}
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
 
-.active {
-  background-color: #04AA6D;
-}
-p{
-    font-family:'Courier New', Courier, monospace;
-    font-size: medium;
-    padding: 10px;
-    height: 300px;
-}
-footer{
-    background-color: #111;
-}
-address{
-    color: #f2f2f2;
-}
-</style>
+    .active {
+      background-color: #04AA6D;
+    }
+
+    p {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: medium;
+      padding: 10px;
+      height: 300px;
+    }
+
+    footer {
+      background-color: #111;
+    }
+
+    input[type=text],
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+
+    }
+
+    address {
+      color: #f2f2f2;
+    }
+  </style>
 </head>
-<body>
-<ul style="width: 100%;">
-  <div style="width: 70%;"><li><img src="logo.png"></li></div>
-  <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="product.html">Productsss</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-<img src="image2.jpg" height="400px" width="100%">
-<p>La SORETRAS est une société anonyme créée le 17 avril 1963 avec un capital initial de 150.000 DT pour assurer le transport de voyageurs et de marchandises. A partir du premier janvier 1988, le transport de marchandises a été dissocié de l'activité de la SORETRAS qui se consacre à partir de cette date exclusivement au transport de voyageurs . Le capital actuel de la SORETRAS est de 1.197.000 DT.</p>
-<p>La SORETRAS est une société anonyme créée le 17 avril 1963 avec un capital initial de 150.000 DT pour assurer le transport de voyageurs et de marchandises. A partir du premier janvier 1988, le transport de marchandises a été dissocié de l'activité de la SORETRAS qui se consacre à partir de cette date exclusivement au transport de voyageurs . Le capital actuel de la SORETRAS est de 1.197.000 DT.</p>
-<p>La SORETRAS est une société anonyme créée le 17 avril 1963 avec un capital initial de 150.000 DT pour assurer le transport de voyageurs et de marchandises. A partir du premier janvier 1988, le transport de marchandises a été dissocié de l'activité de la SORETRAS qui se consacre à partir de cette date exclusivement au transport de voyageurs . Le capital actuel de la SORETRAS est de 1.197.000 DT.</p>
 
-<footer>
-    <table style="width: 100%;">
-    <tr>
-        <td style="width: 85%; border: #04AA6D;">
-            <address>
-                Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br> 
-                Visit us at:<br>
-                Example.com<br>
-                Box 564, Disneyland<br>
-                USA
-            </address>
-        </td>
-        <td>
-            <a href="" ><img src="facebook_icon-icons.com_59205.png" width="25px" height="25px"></a>
-        </td>
-        <td>
-            <a href="" ><img src="facebook_icon-icons.com_59205.png" width="25px" height="25px"></a>
-        </td>
-        <td>
-            <a href="" ><img src="facebook_icon-icons.com_59205.png" width="25px" height="25px"></a>
-        </td>
-    </tr>
-   
+<body>
+  <ul style="width: 100%;">
+    <div style="width: 70%;">
+      <li><img src="logo.png"></li>
+    </div>
+    <li><a class="active" href="index.html">Convertisseur</a></li>
+    <li><a href="product.html">Productsss</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <h1>
+    <center>Convertisseur Celsius Fahreinheit
+  </h1>
+  <div id="form">
+    <form>
+      <label for="Celsus">Celsus</label>
+      <input type="text" id="fcelsus" name="Celsus" placeholder="Enter degree on Celsus" onchange="calc()">
+      <br>
+      <label for="Fahreinheit">Fahreinheit</label>
+      <input type="text" id="Fahreinheit" name="Fahreinheit" onchange="calc()"  >
+     
+    </form>
+  </div>
+  <script>
+    function calc(){
+      var element2 = document.getElementById("Fahreinheit").value;
+      var element = document.getElementById("fcelsus").value;
+      if(event.target.id=="fcelsus") {
+        var cal=(element*1.8)+32;
+      document.getElementById("Fahreinheit").value= parseInt(cal);
+
+      }
+      else {
+        var cal=(element-32)*5/9;
+      document.getElementById("fcelsus").value= parseInt(cal);
+      }
+    }
+    
+  </script>
+<br><br><br><br>
+<center><Table widht="100%">
+  <td widht="50%"><h1>Joueur 1</h1><input type="text"></td>
+  <td widht="50%"><h1>Joueur 2</h1><input type="text"></td>
+</tr>
 </table>
-</footer>
+<Table widht="100%">
+  <td><input height="300px" width="300px" type="image" src="icone1.jfif"></td>
+  <td><input height="50px" width="100px" type="text"></td>
+  <td><input height="50px" width="100px" type="text"></td>
+  <td><input height="50px" width="100px" type="text"></td>
+  <td><input height="50px" width="100px" type="text"></td>
+</tr>
+</table>
+<Table widht="100%">
+  <td><input height="50px" width="100px" type="text"></td>
+  <td><input height="50px" width="100px" type="text"></td>
+  <td><input height="50px" width="100px" type="text"></td>
+  <td><input height="50px" width="100px" type="text"></td>
+  <td><input height="50px" width="100px" type="text"></td>
+</tr>
+</table>
+</center>
+  <footer>
+    <table style="width: 100%;">
+      <tr>
+        <td style="width: 85%; border: #04AA6D;">
+          <address>
+            Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            USA
+          </address>
+        </td>
+        <td>
+          <a href=""><img src="facebook_icon-icons.com_59205.png" width="25px" height="25px"></a>
+        </td>
+        <td>
+          <a href=""><img src="facebook_icon-icons.com_59205.png" width="25px" height="25px"></a>
+        </td>
+        <td>
+          <a href=""><img src="facebook_icon-icons.com_59205.png" width="25px" height="25px"></a>
+        </td>
+      </tr>
+
+    </table>
+  </footer>
 
 </body>
+
 </html>
